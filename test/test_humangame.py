@@ -15,13 +15,19 @@ class TestHumanGame:
         assert result == 0 or result == 1 or result == -1
     
     def test_number_lower_than_1_throws_ValueError(self):
-        with pytest.raises(ValueError):
-            self.game.check_number("0")
+        assert self.game.check_number("0") == None
             
     def test_number_greater_than_100_throws_ValueError(self):
-        with pytest.raises(ValueError):
-            self.game.check_number("200")
+        assert self.game.check_number("200") == None
     
     def test_string_input_throws_ValueError(self):
-        with pytest.raises(ValueError):
-            self.game.check_number("two")
+        assert self.game.check_number("asd") == None
+    
+    def test_input_lower_than_number(self):
+        assert self.game.check_number(str(self.game.number - 1)) == -1
+    
+    def test_input_is_the_number(self):
+        assert self.game.check_number(str(self.game.number)) == 0
+    
+    def test_input_greater_than_number(self):
+        assert self.game.check_number(str(self.game.number + 1)) == 1
