@@ -6,7 +6,7 @@ This game has two game modes:
 1. You guess the number between 1 and 100 that the computer thought.
 2. The computer guesses the number between 1 and 100 that you have thought
 
-##Instructions
+## Instructions
 In the console, browse to the src folder, and execute the game in the console with the command:
   `python guessingBrite.py` 
 The first screen will allow you to choose the game mode.
@@ -19,5 +19,5 @@ Enter =, y or Y when the computer finds the number.
 
 You can exit the game by entering q or Q in the main menu.
 
-###Tests
+### Tests
 The tests are written to be executed with the command `py.test`
