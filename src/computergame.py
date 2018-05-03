@@ -6,7 +6,7 @@ class ComputerGame:
         self.min_limit = 1
         self.max_limit = 100
         self.numbers = []
-        self.guess()
+        self.play()
 
     @property
     def number(self):
@@ -24,10 +24,29 @@ class ComputerGame:
     
     def check_guess(self, comparator):
         if comparator == ">" or comparator == "+":
-            self.min_limit = self.number
+            self.min_limit = self.number + 1
+            return 0
         elif comparator == "<" or comparator == "-":
-            self.max_limit = self.number
-        elif comparator == "=":
+            self.max_limit = self.number - 1
+            return 0
+        elif comparator == "=" or comparator == "y" or comparator == "Y":
             return 1
-        else:
-            None
+            
+    def play(self):
+        print("\nThink a number between 1 and 100, I will guess it")
+        self.guess()
+        comparator = input("\nYour number is " + str(self.number) + "?: ")
+        result = self.check_guess(comparator)
+        while result != 1:
+            if result == None:
+                print("Please enter > or + when your number is greater,\
+                       \n< or - when your number is lower,\
+                       \n and =, y or Y when it is the number.")
+            else:
+                self.guess()
+            comparator = input("\nYour number is " 
+                                    + str(self.number) + "?: ")
+            result = self.check_guess(comparator)
+        print("\nCongratulate me, I won!")
+
+game = ComputerGame()
