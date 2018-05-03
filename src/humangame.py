@@ -33,5 +33,3 @@ class HumanGame:
                 new_guess = input("Please, enter a number between 1 and 100: ")
             result = self.check_number(new_guess)
         print("\nCongratulations, you won!\n")
-        
-game = HumanGame()
