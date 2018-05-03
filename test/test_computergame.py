@@ -35,3 +35,6 @@ class TestComputerGame:
     
     def test_guess_the_correct_number(self):
         assert self.game.check_guess("=") == 1
+    
+    def test_wrong_comparator(self):
+        assert self.game.check_guess("9") == None

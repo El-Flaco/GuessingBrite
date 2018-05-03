@@ -21,7 +21,8 @@ class HumanGame:
             return 1
     
     def start(self):
-        guess = input("\nI thought in a number between 1 and 100\nCan you guess it?: ")
+        print("\nI thought in a number between 1 and 100")
+        guess = input("\nCan you guess it?: ")
         self.play(guess)
     
     def play(self, guess):

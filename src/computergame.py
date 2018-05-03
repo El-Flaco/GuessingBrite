@@ -29,3 +29,5 @@ class ComputerGame:
             self.max_limit = self.number
         elif comparator == "=":
             return 1
+        else:
+            None
