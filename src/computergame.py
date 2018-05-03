@@ -40,8 +40,8 @@ class ComputerGame:
         while result != 1:
             if result == None:
                 print("Please enter > or + when your number is greater,\
-                       \n< or - when your number is lower,\
-                       \n and =, y or Y when it is the number.")
+                       \n\t< or - when your number is lower,\
+                       \n\tand =, y or Y when it is the number.")
             else:
                 self.guess()
             comparator = input("\nYour number is " 
