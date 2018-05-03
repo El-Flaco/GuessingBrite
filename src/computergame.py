@@ -13,7 +13,14 @@ class ComputerGame:
         return self.numbers[-1] if self.numbers else None
 
     def guess(self):
-        self.numbers.append(random.randint(self.min_limit, self.max_limit + 1))
+        if self.max_limit - self.min_limit > 1:
+            guess = random.randint(self.min_limit, self.max_limit + 1)
+        else:
+            if self.number == self.max_limit:
+                guess = self.min_limit
+            else:
+                guess = self.max_limit
+        self.numbers.append(guess)
     
     def check_guess(self, comparator):
         if comparator == ">" or comparator == "+":
