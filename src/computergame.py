@@ -16,7 +16,9 @@ class ComputerGame:
         self.numbers.append(random.randint(self.min_limit, self.max_limit + 1))
     
     def check_guess(self, comparator):
-        if comparator == ">":
+        if comparator == ">" or comparator == "+":
             self.min_limit = self.number
-        elif comparator == "<":
+        elif comparator == "<" or comparator == "-":
             self.max_limit = self.number
+        elif comparator == "=":
+            return 1

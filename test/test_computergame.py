@@ -31,7 +31,7 @@ class TestComputerGame:
         while self.game.number != 100:
             self.game.check_guess(">")
             self.game.guess()
-            print(self.game.min_limit)
         assert self.game.number == 100
-        
     
+    def test_guess_the_correct_number(self):
+        assert self.game.check_guess("=") == 1
