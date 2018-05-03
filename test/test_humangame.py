@@ -2,6 +2,7 @@ import pytest
 
 from src.humangame import HumanGame
 
+
 class TestHumanGame:
 
     def setup_method(self):

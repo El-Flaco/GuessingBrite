@@ -2,10 +2,9 @@ from humangame import HumanGame
 from computergame import ComputerGame
 
 
-class Game:
+class PlayGame:
 
     def __init__(self):
-        self.finished = False
         self.select_mode()
         
     def select_mode(self):
@@ -13,16 +12,21 @@ class Game:
         print("\nIn this game someone has to guess a number between 1 and 100")
         print("\nThere are two game modes:\
                 \n\t[1] - You guess the number I thought.\
-                \n\t[2] - I guess the number you thought.")
+                \n\t[2] - I guess the number you thought.\
+                \n\t[Q] - EXIT -> ")
         mode = ""
-        while mode not in ["1", "2"]:
-            mode = input("\nEnter 1 or 2 to select the game mode: ")
+        while mode not in ["1", "2", "q", "Q"]:
+            mode = input("\nSelect an option to play: ")
+        if mode in ["q", "Q"]:
+            return
         self.start_game(mode)
     
     def start_game(self, mode):
-        if mode == 1:
+        if mode == "1":
             self.mode = HumanGame()
         else:
             self.mode = ComputerGame()
+        self.mode.play()
+        PlayGame()
 
-Game()
+PlayGame()

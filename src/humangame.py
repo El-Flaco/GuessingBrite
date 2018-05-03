@@ -5,7 +5,6 @@ class HumanGame:
 
     def __init__(self):
         self.number = random.randint(1, 101)
-        self.play()
     
     def check_number(self, guess):
         if not guess.isnumeric():

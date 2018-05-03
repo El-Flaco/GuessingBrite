@@ -1,12 +1,12 @@
 import random
 
+
 class ComputerGame:
 
     def __init__(self):
         self.min_limit = 1
         self.max_limit = 100
         self.numbers = []
-        self.play()
 
     @property
     def number(self):

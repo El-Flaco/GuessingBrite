@@ -1,1 +1,1 @@
-all = ["humangame", "computergame", "games"]
+all = ["humangame", "computergame", "guessingbrite"]

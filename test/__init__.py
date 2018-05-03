@@ -1,1 +1,1 @@
-all = ["test_humangame", "test_computergame", "test_games"]
+all = ["test_humangame", "test_computergame", "test_guessingbrite"]
