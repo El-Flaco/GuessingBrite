@@ -20,7 +20,7 @@ class HumanGame:
                 return -1
             return 1
     
-    def play(self, guess):
+    def play(self):
         print("\nI thought in a number between 1 and 100")
         guess = input("\nCan you guess it?: ")
         result = self.check_number(guess)
