@@ -48,5 +48,3 @@ class ComputerGame:
                                     + str(self.number) + "?: ")
             result = self.check_guess(comparator)
         print("\nCongratulate me, I won!")
-
-game = ComputerGame()
