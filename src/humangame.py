@@ -5,7 +5,7 @@ class HumanGame:
 
     def __init__(self):
         self.number = random.randint(1, 101)
-        self.start()
+        self.play()
     
     def check_number(self, guess):
         if not guess.isnumeric():
@@ -20,12 +20,9 @@ class HumanGame:
                 return -1
             return 1
     
-    def start(self):
+    def play(self, guess):
         print("\nI thought in a number between 1 and 100")
         guess = input("\nCan you guess it?: ")
-        self.play(guess)
-    
-    def play(self, guess):
         result = self.check_number(guess)
         while result != 0:
             if result == 1:
