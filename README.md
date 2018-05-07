@@ -7,7 +7,7 @@ This game has two game modes:
 2. The computer guesses the number between 1 and 100 that you have thought.
 
 ## Instructions
-In the console, browse to the src folder, and execute the game with the command `python guessingBrite.py`.
+In the console, browse to the src folder, and execute the game with the command `python guessingbrite.py`.
 
 The first screen will allow you to choose the game mode.
 * **You guess**
